@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "This API is used by th consumers who what to generate swagger from an API. ",
+    "description": "This API is used by th consumers who what to generate swagger from an API. Right now tryout operation is disabled in the developer portal. Download the swagger of this api from the <a href=\"https://github.com/KrishanuMaity76/API2Swagger-API/blob/master/API2Swagger.json\" target=\"balnk\">GitHub</a>. Use Swagger UI to check the API specification and perfrom tryout",
     "version": "0.2.1",
     "title": "API2Swagger API",
     "contact": {
@@ -35,14 +35,14 @@
             "name": "Content-Type",
             "in": "header",
             "type": "string",
-            "required": true,
+            "required": false,
             "default": "application/json",
             "description": "The MIME Type for the request. Example: text/xml"
           },
           {
             "name": "Accept",
             "in": "header",
-            "required": true,
+            "required": false,
             "type": "string",
             "default": "application/json",
             "description": "The format (MIME type) of the response. Example: text/xml"
@@ -100,14 +100,14 @@
             "name": "Content-Type",
             "in": "header",
             "type": "string",
-            "required": true,
+            "required": false,
             "default": "application/json",
             "description": "The MIME Type for the request. Example: text/xml"
           },
           {
             "name": "Accept",
             "in": "header",
-            "required": true,
+            "required": false,
             "type": "string",
             "default": "application/json",
             "description": "The format (MIME type) of the response. Example: text/xml"
@@ -205,6 +205,35 @@
     },
     "swagger": {
       "type": "object"
+    },
+    "error": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "description": "First Name provides a given individual first designation by which the person is known."
+        },
+        "id": {
+          "type": "string",
+          "description": "This maps to your Customer ID (e.g., SkyMiles number), Employee ID field (e.g., PPR number), or Vendor ID."
+        },
+        "lastName": {
+          "type": "string",
+          "description": "Last Name provides a family designation by which the person is known."
+        },
+        "prefixName": {
+          "type": "string",
+          "description": "Prefix Name identifies the valid abbreviation of a prefix found at the beginning of a person's name."
+        },
+        "suffixName": {
+          "type": "string",
+          "description": "Suffix Name provides a valid abbreviation that follows the full name of a person."
+        },
+        "typeCode": {
+          "type": "string",
+          "description": "Notification Recipient Type Code represents a kind of person or entity that may receive a message. C, E, or V."
+        }
+      }
     },
     "requestObject":{
       "type": "object"
