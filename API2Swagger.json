@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "This API is used by th consumers who what to generate swagger from an API. Right now tryout operation is disabled in the developer portal. Download the swagger of this api from the <a href=\"https://github.com/KrishanuMaity76/API2Swagger-API/blob/master/API2Swagger.json\" target=\"balnk\">GitHub</a>. Use Swagger UI to check the API specification and perfrom tryout",
+    "description": "This API is used by th consumers who what to generate swagger from an API. Right now tryout operation is disabled in the developer portal. Download the swagger of this api from the <a href=\"https://github.com/KrishanuMaity76/API2Swagger-API/blob/master/API2Swagger.json\" target=\"balnk\">GitHub</a>. Use Swagger UI to check the API specification and perfrom tryout.",
     "version": "0.2.1",
     "title": "API2Swagger API",
     "contact": {
