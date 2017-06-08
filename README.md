@@ -1,2 +1,2 @@
 # API2Swagger-API
-APIs fro generating swagger from APIs
+APIs for generating swagger from APIs
