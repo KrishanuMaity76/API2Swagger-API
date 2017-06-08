@@ -206,35 +206,6 @@
     "swagger": {
       "type": "object"
     },
-    "error": {
-      "type": "object",
-      "properties": {
-        "firstName": {
-          "type": "string",
-          "description": "First Name provides a given individual first designation by which the person is known."
-        },
-        "id": {
-          "type": "string",
-          "description": "This maps to your Customer ID (e.g., SkyMiles number), Employee ID field (e.g., PPR number), or Vendor ID."
-        },
-        "lastName": {
-          "type": "string",
-          "description": "Last Name provides a family designation by which the person is known."
-        },
-        "prefixName": {
-          "type": "string",
-          "description": "Prefix Name identifies the valid abbreviation of a prefix found at the beginning of a person's name."
-        },
-        "suffixName": {
-          "type": "string",
-          "description": "Suffix Name provides a valid abbreviation that follows the full name of a person."
-        },
-        "typeCode": {
-          "type": "string",
-          "description": "Notification Recipient Type Code represents a kind of person or entity that may receive a message. C, E, or V."
-        }
-      }
-    },
     "requestObject":{
       "type": "object"
     },
