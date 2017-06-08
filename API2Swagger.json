@@ -1,0 +1,245 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This API is used by th consumers who what to generate swagger from an API. ",
+    "version": "0.2.1",
+    "title": "API2Swagger API",
+    "contact": {
+      "email": "dreams4krishanu@gmail.com"
+    }
+  },
+  "host": "krishapispace-prod.apigee.net",
+  "schemes": [
+    "http"
+  ],
+  "basePath": "/api2swagger/v1",
+  "paths": {
+    "/fromURL": {
+      "post": {
+        "operationId": "Get swagger from the API URL",
+        "summary": "Get swagger from the API URL",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+            "name": "apikey",
+            "in": "query",
+            "type": "string",
+            "required": true,
+            "description": "API key to validate the authentic user request"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "type": "string",
+            "required": true,
+            "default": "application/json",
+            "description": "The MIME Type for the request. Example: text/xml"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "default": "application/json",
+            "description": "The format (MIME type) of the response. Example: text/xml"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Input must be specified in the request body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/fromURlInput"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/swagger"
+            }
+          },
+          "400": {
+            "description": "Bad data"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal server error."
+          },
+          "default": {
+            "description": "Error."
+          }
+        }
+      }
+    },
+    "/fromSpecification": {
+      "post": {
+        "operationId": "Get swagger from the API specification",
+        "summary": "Get swagger from the API specification, request, response and URL are input of the API",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+            "name": "apikey",
+            "in": "query",
+            "type": "string",
+            "required": true,
+            "description": "API key to validate the authentic user request"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "type": "string",
+            "required": true,
+            "default": "application/json",
+            "description": "The MIME Type for the request. Example: text/xml"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "default": "application/json",
+            "description": "The format (MIME type) of the response. Example: text/xml"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Input must be specified in the request body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/fromSpecificationInput"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/swagger"
+            }
+          },
+          "400": {
+            "description": "Bad data"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal server error."
+          },
+          "default": {
+            "description": "Error."
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "fromURlInput": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "This field is used to provide the url of the api. "
+        },
+        "http_method": {
+          "type": "string",
+          "description": "HTTP method of the api. If your api has multiple method on same resource, then execute api2swagger api once at time for each method"
+        },
+        "request": {
+          "$ref": "#/definitions/requestObject",
+          "description": "This is the request of the api. If the method is not GET then there will payload of the api."
+        },
+        "oAUthType": {
+          "type": "string",
+          "description": "Type of oauth you want to apply on the api in swagger spec. Right now only Basic is allowed in this attribute"
+        }
+      },
+      "required": [
+        "url",
+        "http_method",
+        "oAUthType"
+      ]
+    },
+    "fromSpecificationInput": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "This field is used to provide the url of the api. "
+        },
+        "http_method": {
+          "type": "string",
+          "description": "HTTP method of the api. If your api has multiple method on same resource, then execute api2swagger api once at time for each method"
+        },
+        "request": {
+          "$ref": "#/definitions/requestObject",
+          "description": "This is the request of the api. If the method is not GET then there will payload of the api."
+        },
+        "response": {
+          "$ref": "#/definitions/responseObject",
+          "description": "This is the response of the api."
+        },
+        "oAUthType": {
+          "type": "string",
+          "description": "Type of oauth you want to apply on the api in swagger spec. Right now only Basic is allowed in this attribute"
+        }
+      },
+      "required": [
+        "url",
+        "http_method",
+        "response",
+        "oAUthType"
+      ]
+    },
+    "swagger": {
+      "type": "object"
+    },
+    "error": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "description": "First Name provides a given individual first designation by which the person is known."
+        },
+        "id": {
+          "type": "string",
+          "description": "This maps to your Customer ID (e.g., SkyMiles number), Employee ID field (e.g., PPR number), or Vendor ID."
+        },
+        "lastName": {
+          "type": "string",
+          "description": "Last Name provides a family designation by which the person is known."
+        },
+        "prefixName": {
+          "type": "string",
+          "description": "Prefix Name identifies the valid abbreviation of a prefix found at the beginning of a person's name."
+        },
+        "suffixName": {
+          "type": "string",
+          "description": "Suffix Name provides a valid abbreviation that follows the full name of a person."
+        },
+        "typeCode": {
+          "type": "string",
+          "description": "Notification Recipient Type Code represents a kind of person or entity that may receive a message. C, E, or V."
+        }
+      }
+    },
+    "requestObject":{
+      "type": "object"
+    },
+    "responseObject":{
+      "type": "object"
+    }
+  }
+}
