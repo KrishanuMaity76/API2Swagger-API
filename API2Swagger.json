@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "This API is used by th consumers who what to generate swagger from an API. Right now tryout operation is disabled in the developer portal. Download the swagger of this api from the <a href=\"https://github.com/KrishanuMaity76/API2Swagger-API/blob/master/API2Swagger.json\" target=\"balnk\">GitHub</a>. Use Swagger UI to check the API specification and perfrom tryout.",
+    "description": "This API is used by th consumers who what to generate swagger from an API. Right now tryout operation is disabled in the developer portal. Download the swagger of this api from the <a href=\"https://github.com/KrishanuMaity76/API2Swagger-API/blob/master/API2Swagger.json\" target=\"balnk\">GitHub</a>. Use Swagger UI to check the API specification and perfrom tryout",
     "version": "0.2.1",
     "title": "API2Swagger API",
     "contact": {
@@ -151,11 +151,13 @@
       "properties": {
         "url": {
           "type": "string",
-          "description": "This field is used to provide the url of the api. "
+          "description": "This field is used to provide the url of the api. ",
+          "default":"https://www.googleapis.com/books/v1/volumes?q=quilting"
         },
         "http_method": {
           "type": "string",
-          "description": "HTTP method of the api. If your api has multiple method on same resource, then execute api2swagger api once at time for each method"
+          "description": "HTTP method of the api. If your api has multiple method on same resource, then execute api2swagger api once at time for each method",
+          "default":"GET"
         },
         "request": {
           "$ref": "#/definitions/requestObject",
@@ -163,7 +165,8 @@
         },
         "oAUthType": {
           "type": "string",
-          "description": "Type of oauth you want to apply on the api in swagger spec. Right now only Basic is allowed in this attribute"
+          "description": "Type of oauth you want to apply on the api in swagger spec. Right now only Basic is allowed in this attribute",
+          "default":"GET"
         }
       },
       "required": [
@@ -177,11 +180,13 @@
       "properties": {
         "url": {
           "type": "string",
-          "description": "This field is used to provide the url of the api. "
+          "description": "This field is used to provide the url of the api. ",
+          "default":"https://www.googleapis.com/books/v1/volumes?q=quilting"
         },
         "http_method": {
           "type": "string",
-          "description": "HTTP method of the api. If your api has multiple method on same resource, then execute api2swagger api once at time for each method"
+          "description": "HTTP method of the api. If your api has multiple method on same resource, then execute api2swagger api once at time for each method",
+          "default":"GET"
         },
         "request": {
           "$ref": "#/definitions/requestObject",
@@ -193,7 +198,8 @@
         },
         "oAUthType": {
           "type": "string",
-          "description": "Type of oauth you want to apply on the api in swagger spec. Right now only Basic is allowed in this attribute"
+          "description": "Type of oauth you want to apply on the api in swagger spec. Right now only Basic is allowed in this attribute",
+          "default":"Basic"
         }
       },
       "required": [
