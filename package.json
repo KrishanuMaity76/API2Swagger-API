@@ -1,0 +1,29 @@
+{
+  "name": "SwaggerGen",
+  "version": "0.1.0",
+  "description": "SwaggerGen",
+  "main": "hello-world-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
+  },
+  "repository": "",
+  
+  "keywords": [
+    "node.js",
+    "eclipse",
+    "nodeclipse",
+    "Swagger",
+    "Generator",
+    "API",
+    "Runtime"
+  ],
+  "author": "",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "async": "^1.5.0",
+    "http-status": "^0.2.0",
+    "json-schema-generator": "^2.0.3",
+    "request": "^2.67.0"
+  }
+}
