@@ -14,7 +14,7 @@ This project is created to expose the API2Swagger as API so that it doesn't need
 For now there is nps installtion available. Download the project and install in node.js environment.
 
 ## API Specification
-For API specification refer the swagger document in here. https://github.com/KrishanuMaity76/API2Swagger-API
+For API specification refer the swagger document in here. https://github.com/KrishanuMaity76/API2Swagger-API-Swagger
 
 
 
